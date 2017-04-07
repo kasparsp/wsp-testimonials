@@ -1,0 +1,7 @@
+/*
+rating star toggler
+*/
+.rating-star {
+  color: gold; }
+  .rating-star input {
+    display: none; }
