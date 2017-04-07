@@ -68,11 +68,13 @@
 
 				<div class="wsp wsp-review wsp-review-<?php echo $html->ID; ?>">
 					<p class="wsp wsp-review-content"><?php echo $html->content; ?></p>
-					<p class="wsp wsp-review-rating">
-						<span class="wsp wsp-stars wsp-stars-<?php $html->ID ?>">
-							<?php echo str_repeat($star, $html->stars); ?>
-						</span>
-					</p>
+					<?php if($html->stars):?>
+						<p class="wsp wsp-review-rating">
+							<span class="wsp wsp-stars wsp-stars-<?php $html->ID ?>">
+								<?php echo str_repeat($star, $html->stars); ?>
+							</span>
+						</p>
+					<?php endif; ?>
 					<p class="wsp wsp-review-name"><?php echo $html->title; ?></p>
 				</div>
 				<?php if($a['hr']): ?>
