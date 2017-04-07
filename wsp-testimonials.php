@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WSP Testimonials
- * Version: 0.0.2
+ * Version: 0.0.3
  * Plugin URI: http://www.onthemapmarketing.com/
  * Description: A Testimonial fallback plugin for WP-Schema-Plugin
  * Author: On The Map Marketing
@@ -28,7 +28,6 @@ require_once( 'includes/lib/class-wsp-testimonials-admin-api.php' );
 require_once( 'includes/lib/class-wsp-testimonials-post-type.php' );
 require_once( 'includes/lib/wsp-testimonials-meta.php' );
 // require_once( 'includes/lib/class-wsp-testimonials-taxonomy.php' );
-wp_enqueue_style( 'dashicons' );
 
 /**
  * Returns the main instance of wsp_testimonials to prevent the need to use globals.
@@ -39,7 +38,7 @@ wp_enqueue_style( 'dashicons' );
 function wsp_testimonials () {
 	// if(!is_plugin_active('/wp-schema-plugin/wp-schema-plugin.php')){
 
-		$instance = wsp_testimonials::instance( __FILE__, '0.0.2' );
+		$instance = wsp_testimonials::instance( __FILE__, '0.0.3' );
 
 		if ( is_null( $instance->settings ) ) {
 			$instance->settings = wsp_testimonials_Settings::instance( $instance );
